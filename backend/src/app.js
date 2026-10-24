@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 function validarId(req, res) {
   const id = Number(req.params.id);
   if (!Number.isInteger(id) || id <= 0) {
-    res.status(400).json({ error: "El id debe ser un número entero positivo." });
+    res.status(200).json({ error: "El id debe ser un número entero positivo." });
     return null;
   }
   return id;
